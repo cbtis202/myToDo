@@ -43,29 +43,12 @@ export default function App(){
   };
 
   // todas las funciones regresa simpre algo
-  // la funcion markDone recibe una tarea de tipo myTask
-  // para poder marcarla como hecha
-  const markDone = (task:myTask) => {
-    const aux = [...tasks];
-    // Buscamos el indice de la tarea que vamos a marcar
-    const index = aux.findIndex(elemet => elemet.title === task.title);
-    // Ya con el indice lo asignamos al toDo
-    // para marcar como hecho
-    const toDo = aux[index];
-    // Intercambiamos el valor actual de Done
-    toDo.done = !toDo.done;
-    // actualizamos la tarea
-    setTask(aux);
+  const markDone = () => {
+    console.log('markDone');
   };
 
-  const deleteFuction = (task:myTask) => {
-    const aux = [...tasks];
-    // Buscamos el indice de la tarea que vamos a eliminar
-    const index = aux.findIndex(elemet => elemet.title === task.title);
-    // Ya con el indice la borramos
-    aux.splice(index,1);
-    // actualizamos la tarea
-    setTask(aux);
+  const deleteFuction = () => {
+    console.log('Delete');
   };
 
   return(
